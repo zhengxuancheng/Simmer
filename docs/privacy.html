@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simmer · Privacy Policy / 隱私政策 / 隐私政策</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Noto Sans CJK", sans-serif; max-width: 720px; margin: 2em auto; padding: 0 1.5em; color: #222; line-height: 1.6; }
+  h1 { font-size: 1.6em; border-bottom: 2px solid #E8D5B7; padding-bottom: 0.3em; }
+  h2 { font-size: 1.3em; color: #8B6B3A; margin-top: 1.8em; }
+  h3 { font-size: 1.05em; color: #555; }
+  nav { background: #FBF5EA; padding: 0.8em 1em; border-radius: 8px; margin-bottom: 2em; }
+  nav a { margin-right: 1em; color: #8B6B3A; text-decoration: none; font-weight: 600; }
+  .section { margin-bottom: 3em; padding-bottom: 1.5em; border-bottom: 1px solid #eee; }
+  code { background: #F5EFE2; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; }
+  footer { color: #888; font-size: 0.85em; margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#en">English</a>
+  <a href="#zh-hant">繁體中文</a>
+  <a href="#zh-hans">简体中文</a>
+</nav>
+
+<!-- ============ English ============ -->
+<section class="section" id="en">
+<h1>Simmer · Privacy Policy</h1>
+<p><strong>Effective date:</strong> 2026-04-20 · <strong>Last updated:</strong> 2026-04-20</p>
+
+<p>Simmer ("we", "us", the "App") is an iOS application that helps you capture fleeting ideas and nurture them into actionable plans through AI-assisted conversation. This policy explains what data Simmer collects, how it is used, and the choices you have.</p>
+
+<h2>1. Data We Collect</h2>
+<h3>1.1 On-device data</h3>
+<ul>
+  <li><strong>Your ideas</strong>: the text you capture, classification tags, energy scores, reminder schedules, conversation history, and your derived personal profile. This data is stored on your device using Apple SwiftData and optionally synchronized across your own devices via Apple iCloud (CloudKit).</li>
+  <li><strong>Settings</strong>: language preference, notification schedule, quiet hours, profile-learning on/off toggle.</li>
+</ul>
+
+<h3>1.2 Data sent to third-party AI providers</h3>
+<p>When a conversation cannot be handled by Apple's on-device Foundation Models (iOS 26+ required for local inference), Simmer sends the specific text of that conversation turn to Google Gemini 2.5 Flash through our own relay on Cloudflare Workers. Specifically:</p>
+<ul>
+  <li>The relay URL is <code>https://simmer-api.liujinxingde2008.workers.dev</code> (edge-served, no backend database).</li>
+  <li>Only the minimum text needed to answer your message is sent. No user identifier, no device identifier, no IP-derived location.</li>
+  <li>Google is the model provider. Simmer does not store your conversation on the relay; the relay proxies the request and streams the answer back.</li>
+  <li>Google's handling of the forwarded text is governed by the <a href="https://ai.google.dev/gemini-api/terms">Gemini API Terms of Service</a>.</li>
+</ul>
+<p>On devices running iOS 26 or later, Simmer will prefer Apple Foundation Models (local, offline, zero data transfer) for classification and short-text tasks. You cannot opt out of the local path; opting out of cloud AI will limit conversation length and reasoning quality.</p>
+
+<h3>1.3 Data we do NOT collect</h3>
+<ul>
+  <li>No analytics SDKs, no crash reporting that identifies users, no advertising IDs.</li>
+  <li>No contact list, microphone recording archive, photo library, or location data.</li>
+  <li>No account system. Simmer does not have user accounts or passwords.</li>
+</ul>
+
+<h2>2. How Data Is Used</h2>
+<ul>
+  <li>To render the list of your captured ideas and calculate energy levels locally.</li>
+  <li>To schedule notifications on your device.</li>
+  <li>To produce AI-assisted conversation and classification results for you, and only you.</li>
+  <li>If iCloud sync is enabled, to mirror your data across your own Apple ID's devices via Apple's CloudKit (Apple stores it encrypted on your behalf; Simmer developer has no access).</li>
+</ul>
+
+<h2>3. Data Retention &amp; Deletion</h2>
+<ul>
+  <li>All on-device data persists until you delete it.</li>
+  <li>You can clear your learned profile at any time: Settings → 画像 → 清除画像.</li>
+  <li>You can pause profile learning at any time: Settings → 画像 → 暂停学习.</li>
+  <li>Deleting the App from your device removes all local data. If iCloud sync is enabled, Apple's standard retention rules apply.</li>
+  <li>We do not retain your conversation content on our Cloudflare Worker beyond the duration of each request.</li>
+</ul>
+
+<h2>4. Children</h2>
+<p>Simmer is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+
+<h2>5. Changes to This Policy</h2>
+<p>We may update this policy to reflect changes in the App or the law. We will post the updated policy at this URL with a new "Last updated" date.</p>
+
+<h2>6. Contact</h2>
+<p>Questions or requests: <a href="mailto:chengchengcheng897@gmail.com">chengchengcheng897@gmail.com</a></p>
+</section>
+
+<!-- ============ 繁體中文 ============ -->
+<section class="section" id="zh-hant" lang="zh-Hant">
+<h1>Simmer · 隱私政策</h1>
+<p><strong>生效日期：</strong>2026-04-20 · <strong>最後更新：</strong>2026-04-20</p>
+
+<p>Simmer（「我們」、「本應用」）是一款 iOS 應用，協助您捕捉一閃而過的想法，透過 AI 對話把它們煨成可行的方案。本政策說明 Simmer 收集哪些資料、如何使用，以及您擁有的選擇。</p>
+
+<h2>1. 我們收集的資料</h2>
+<h3>1.1 設備本地資料</h3>
+<ul>
+  <li><strong>您的想法</strong>：您輸入的文字、分類標籤、能量分數、提醒排程、對話記錄、以及從中提煉的個人畫像。這些資料透過 Apple SwiftData 儲存在您的設備上，並可選擇透過 Apple iCloud（CloudKit）在您自己的 Apple ID 設備間同步。</li>
+  <li><strong>設定</strong>：語言偏好、通知排程、勿擾時段、畫像學習開關。</li>
+</ul>
+
+<h3>1.2 傳送至第三方 AI 供應商的資料</h3>
+<p>當對話無法由 Apple 設備端 Foundation Models 處理時（需 iOS 26+ 才能本地推理），Simmer 會將該輪對話的文字透過我們部署於 Cloudflare Workers 的中繼，傳送到 Google Gemini 2.5 Flash。具體：</p>
+<ul>
+  <li>中繼網址為 <code>https://simmer-api.liujinxingde2008.workers.dev</code>（邊緣節點，無後端資料庫）。</li>
+  <li>僅傳送回答您本輪所需的最小文字。不附加使用者識別碼、設備識別碼或 IP 位置。</li>
+  <li>模型提供方為 Google。Simmer 不在中繼端儲存您的對話，中繼只代理轉發並串流回應。</li>
+  <li>Google 對轉發文字的處理依其 <a href="https://ai.google.dev/gemini-api/terms">Gemini API 服務條款</a> 規範。</li>
+</ul>
+<p>在 iOS 26 或更新版本的設備，Simmer 會優先使用 Apple Foundation Models（設備端、離線、零資料外傳）處理分類與短文本任務。您無法停用本地路徑；停用雲端 AI 會限制對話長度與推理品質。</p>
+
+<h3>1.3 我們不收集的資料</h3>
+<ul>
+  <li>沒有分析 SDK、沒有可識別使用者的崩潰回報、沒有廣告識別碼。</li>
+  <li>沒有通訊錄、麥克風錄音歸檔、相簿、或定位資料。</li>
+  <li>沒有帳戶系統。Simmer 沒有使用者帳號或密碼。</li>
+</ul>
+
+<h2>2. 資料如何被使用</h2>
+<ul>
+  <li>在本機呈現您捕捉的想法列表並計算能量分數。</li>
+  <li>在您的設備上排程推送通知。</li>
+  <li>為您（也僅為您）產生 AI 對話與分類結果。</li>
+  <li>若啟用 iCloud 同步，透過 Apple CloudKit 在您自己 Apple ID 的設備之間鏡像資料（Apple 以加密方式替您保存，Simmer 開發者無存取權）。</li>
+</ul>
+
+<h2>3. 資料保留與刪除</h2>
+<ul>
+  <li>所有設備端資料會持續保留，直到您刪除為止。</li>
+  <li>您隨時可以清除學到的畫像：設定 → 畫像 → 清除畫像。</li>
+  <li>您隨時可以暫停畫像學習：設定 → 畫像 → 暫停學習。</li>
+  <li>從設備刪除本應用會清除所有本機資料。若啟用 iCloud 同步，則依 Apple 的標準保留規則處理。</li>
+  <li>我們不在 Cloudflare Worker 上保留您的對話內容，僅限請求期間。</li>
+</ul>
+
+<h2>4. 兒童</h2>
+<p>Simmer 非針對未滿 13 歲的兒童設計。我們不會在知情情況下收集兒童的個人資訊。</p>
+
+<h2>5. 本政策的變更</h2>
+<p>我們可能會更新本政策以反映應用或法規的變動。更新後的政策將以新的「最後更新」日期張貼在本網址。</p>
+
+<h2>6. 聯絡</h2>
+<p>問題或請求：<a href="mailto:chengchengcheng897@gmail.com">chengchengcheng897@gmail.com</a></p>
+</section>
+
+<!-- ============ 简体中文 ============ -->
+<section class="section" id="zh-hans" lang="zh-Hans">
+<h1>Simmer · 隐私政策</h1>
+<p><strong>生效日期：</strong>2026-04-20 · <strong>最后更新：</strong>2026-04-20</p>
+
+<p>Simmer（"我们"、"本应用"）是一款 iOS 应用，帮助你捕捉一闪而过的想法，通过 AI 对话把它们煨成可行的方案。本政策说明 Simmer 收集哪些数据、如何使用，以及你拥有的选择。</p>
+
+<h2>1. 我们收集的数据</h2>
+<h3>1.1 设备本地数据</h3>
+<ul>
+  <li><strong>你的想法</strong>：你输入的文字、分类标签、能量分数、提醒排程、对话记录、以及从中提炼的个人画像。这些数据通过 Apple SwiftData 存储在你的设备上，并可选择通过 Apple iCloud（CloudKit）在你自己的 Apple ID 设备间同步。</li>
+  <li><strong>设置</strong>：语言偏好、通知排程、勿扰时段、画像学习开关。</li>
+</ul>
+
+<h3>1.2 发送至第三方 AI 供应商的数据</h3>
+<p>当对话无法由 Apple 设备端 Foundation Models 处理时（需 iOS 26+ 才能本地推理），Simmer 会将该轮对话的文字通过我们部署在 Cloudflare Workers 的中继，发送到 Google Gemini 2.5 Flash。具体：</p>
+<ul>
+  <li>中继地址为 <code>https://simmer-api.liujinxingde2008.workers.dev</code>（边缘节点，无后端数据库）。</li>
+  <li>仅发送回答你本轮所需的最小文本。不附加用户标识符、设备标识符或 IP 位置。</li>
+  <li>模型提供方为 Google。Simmer 不在中继端存储你的对话，中继只代理转发并流式回传。</li>
+  <li>Google 对转发文本的处理依其 <a href="https://ai.google.dev/gemini-api/terms">Gemini API 服务条款</a> 规范。</li>
+</ul>
+<p>在 iOS 26 或更新版本的设备，Simmer 会优先使用 Apple Foundation Models（设备端、离线、零数据传输）处理分类与短文本任务。你无法停用本地路径；停用云端 AI 会限制对话长度与推理质量。</p>
+
+<h3>1.3 我们不收集的数据</h3>
+<ul>
+  <li>没有分析 SDK、没有可识别用户的崩溃回报、没有广告标识符。</li>
+  <li>没有通讯录、麦克风录音归档、相册、或定位数据。</li>
+  <li>没有账户系统。Simmer 没有用户账号或密码。</li>
+</ul>
+
+<h2>2. 数据如何被使用</h2>
+<ul>
+  <li>在本机呈现你捕捉的想法列表并计算能量分数。</li>
+  <li>在你的设备上排程推送通知。</li>
+  <li>为你（也仅为你）生成 AI 对话与分类结果。</li>
+  <li>若启用 iCloud 同步，通过 Apple CloudKit 在你自己 Apple ID 的设备之间镜像数据（Apple 以加密方式替你保存，Simmer 开发者无访问权限）。</li>
+</ul>
+
+<h2>3. 数据保留与删除</h2>
+<ul>
+  <li>所有设备端数据会持续保留，直到你删除为止。</li>
+  <li>你随时可以清除学到的画像：设置 → 画像 → 清除画像。</li>
+  <li>你随时可以暂停画像学习：设置 → 画像 → 暂停学习。</li>
+  <li>从设备删除本应用会清除所有本机数据。若启用 iCloud 同步，则依 Apple 的标准保留规则处理。</li>
+  <li>我们不在 Cloudflare Worker 上保留你的对话内容，仅限请求期间。</li>
+</ul>
+
+<h2>4. 儿童</h2>
+<p>Simmer 非针对未满 13 岁的儿童设计。我们不会在知情情况下收集儿童的个人信息。</p>
+
+<h2>5. 本政策的变更</h2>
+<p>我们可能会更新本政策以反映应用或法规的变动。更新后的政策将以新的"最后更新"日期张贴在本网址。</p>
+
+<h2>6. 联系</h2>
+<p>问题或请求：<a href="mailto:chengchengcheng897@gmail.com">chengchengcheng897@gmail.com</a></p>
+</section>
+
+<footer>
+© 2026 Simmer · Built with care. · <a href="terms.html">Terms of Service / 使用條款 / 使用条款</a>
+</footer>
+
+</body>
+</html>
